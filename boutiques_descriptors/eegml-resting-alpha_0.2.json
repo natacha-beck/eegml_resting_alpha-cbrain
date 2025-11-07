@@ -15,7 +15,7 @@
             "id": "bids_root",
             "name": "BIDS root folder",
             "optional": false,
-            "type": "String",
+            "type": "File",
             "description": "Input BIDS folder to the pipeline.",
             "value-key": "[BIDS_ROOT]"
         },
@@ -25,7 +25,8 @@
             "optional": false,
             "type": "String",
             "description": "Output path to begin writing tool results.",
-            "value-key": "[OUTPUT_PATH]"
+            "value-key": "[OUTPUT_PATH]",
+            "default-value": "eegml_resting_alpha_output"
         }
     ],
     "output-files": [
@@ -43,12 +44,7 @@
     },
     "custom": {
         "cbrain:author": "Dominik Welke <d.welke@leeds.ac.uk>",
-        "cbrain:readonly-input-files": true,
-        "cbrain:integrator_modules": {
-            "BoutiquesInputValueFixer": {
-                "output_path": "cbrain_py_out"
-            }
-        }
+        "cbrain:readonly-input-files": true
     },
     "tags": {
         "domain": [
